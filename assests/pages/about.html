@@ -9,20 +9,21 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code:wght@400&display=swap');
         * {
             -webkit-text-size-adjust: auto;
+            
         }
         [role='dialog'] {
               transition: all 0.3s ease-in-out;
         }
         body {
+            min-height: 100vh;
             font-family: 'Poppins', sans-serif;
             background-color: white;
             color: #1a202c;
-            min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
         .hover-card:hover {
-            transform: scale(1.05);
+            transform: scale(1.10);
             transition: transform 0.3s ease-in-out;
             box-shadow: 0 4px 20px rgba(0, 0, 255, 0.5);
             background-color: #f3f4f6;
@@ -100,17 +101,17 @@
         </header>
     </div>
 
-    <section class="py-12 sm:py-24 flex-grow">
+    <section class="py-4 sm:py-12 flex-grow">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
-            <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card text-center">
+            <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card hover:rotate-2 text-center">
                 <h2 class="text-4xl font-bold text-indigo-600">About Me</h2>
                 <p class="mt-6 text-lg text-gray-600 text-justify">
-                    Hello! I'm Elavarasan Thandapani, an undergraduate cybersecurity enthusiast at Sathyabama Institute of Science and Technology.
+                    Hello! I'm Elavarasan, an undergraduate cybersecurity enthusiast at Sathyabama Institute of Science and Technology.
                     Passionate about ethical hacking, penetration testing, and threat analysis, I strive to contribute to a safer digital world.
                 </p>
             </div>
-            <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card text-center">
-                <h2 class="text-4xl font-bold text-indigo-600">Team</h2>
+            <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card hover:-rotate-2 text-center">
+                <h2 class="text-4xl font-bold text-indigo-600">Team - Binary Misfits</h2>
                 <p class="mt-6 text-lg text-gray-600 text-justify">
                     Introducing the Digital Mavericks: an eclectic team of six tech-savvy renegades determined to conquer the adrenaline-fueled realm of Capture The Flag (CTF) contests.
                     United by a passion for solving cyber puzzles and a rebellious spirit that shuns convention, this group thrives on fusing technical genius with a playful streak of defiance.
@@ -123,18 +124,18 @@
 
     <!-- Skills Section -->
     <section class="py-6">
-        <div class="max-w-7xl mx-auto px-4">
+        <div class="max-w-6xl mx-auto px-4 text-center">
             <h3 class="text-3xl font-bold text-indigo-600 text-center">Skills</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 text-center">
-                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card hover:rotate-2">
                     <h4 class="text-lg font-semibold text-indigo-600">Ethical Hacking</h4>
                     <p class="text-gray-600 mt-2">Proficient in penetration testing and vulnerability assessments.</p>
                 </div>
-                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card hover:-rotate-2">
                     <h4 class="text-lg font-semibold text-indigo-600">Network Security</h4>
                     <p class="text-gray-600 mt-2">Experience in securing networks against potential threats.</p>
                 </div>
-                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card hover:rotate-2">
                     <h4 class="text-lg font-semibold text-indigo-600">Python for Security</h4>
                     <p class="text-gray-600 mt-2">Automation of security processes using Python scripting.</p>
                 </div>
@@ -143,14 +144,49 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-12 bg-gray-200">
-        <div class="max-w-7xl mx-auto text-center px-4">
-            <h3 class="text-3xl font-bold text-indigo-600">Contact Me</h3>
-            <p class="mt-4 text-gray-600">Feel free to reach out for collaborations or inquiries.</p>
-            <a href="mailto:elavarasanthandapani@gmail.com" class="mt-4 inline-block px-6 py-3 bg-indigo-600 rounded-lg text-white font-bold hover:bg-indigo-800">Email Me</a>
+<!-- Footer Section -->
+<footer class="py-10 bg-gradient-to-b from-gray-100 to-gray-300 shadow-lg">
+    <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row items-center justify-between">
+        
+        <!-- Contact Info -->
+        <div class="text-center md:text-left mb-6 md:mb-0">
+            <h3 class="text-3xl font-bold text-indigo-700">📬 Get in Touch</h3>
+            <p class="mt-3 text-gray-700 text-lg">Have a project in mind? Let's connect!</p>
+            <a href="mailto:elavarasanthandapani@gmail.com" 
+               class="mt-4 inline-block px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-full text-white font-semibold text-md shadow-lg hover:shadow-xl hover:from-purple-600 hover:to-indigo-600 transform transition-all duration-300 hover:scale-105"
+               onclick="alert('Email button clicked!')">
+                📧 Email Me
+            </a>
         </div>
-    </section>
 
+        <!-- Social Media Links -->
+        <div class="flex space-x-6">
+            <a href="https://www.instagram.com/_simply.jaswanth/" target="_blank" rel="noopener noreferrer" 
+               class="transition-transform transform hover:scale-110 hover:-rotate-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" 
+                     alt="Instagram" class="w-12 h-12 rounded-full border-2 border-pink-500 shadow-md p-1 bg-white">
+            </a>
+
+            <a href="https://www.linkedin.com/in/elavarasan-t-a5971b2a5" target="_blank" rel="noopener noreferrer" 
+               class="transition-transform transform hover:scale-110 hover:rotate-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" 
+                     alt="LinkedIn" class="w-12 h-12 rounded-full border-2 border-blue-600 shadow-md p-1 bg-white">
+            </a>
+
+            <a href="https://github.com/Pharoah01" target="_blank" rel="noopener noreferrer" 
+               class="transition-transform transform hover:scale-110 hover:-rotate-3">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" 
+                     alt="GitHub" class="w-12 h-12 rounded-full border-2 border-gray-800 shadow-md p-1 bg-white">
+            </a>
+        </div>
+    </div>
+
+    <p class="text-center text-gray-600 mt-8 text-sm tracking-wider">
+        &copy; 2025 Hexph4r40h. All rights reserved.
+    </p>
+</footer>
+
+    
 
     <!-- JavaScript -->
     <script>
@@ -171,3 +207,4 @@
 
 </body>
 </html>
+
