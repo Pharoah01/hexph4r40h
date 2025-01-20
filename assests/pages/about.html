@@ -13,9 +13,20 @@
         [role='dialog'] {
               transition: all 0.3s ease-in-out;
         }
-        body{
+        body {
             font-family: 'Poppins', sans-serif;
-            }
+            background-color: white;
+            color: #1a202c;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .hover-card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 255, 0.5);
+            background-color: #f3f4f6;
+        }
     </style>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
@@ -89,21 +100,55 @@
         </header>
     </div>
 
-    <!-- About Me Section -->
-    <div class="relative isolate overflow-hidden bg-gray-900 py-12 sm:py-24 h-screen">
-        <!--<img src="assests/images/DALL·E 2024-12-06 23.15.03 - A hyper-realistic 3D render of a person sitting at a desk in front of a laptop, working on cybersecurity tasks. The desk is equipped with modern gadge.webp" alt="Background Image" class="absolute inset-0 -z-10 w-full h-full object-cover opacity-30">-->
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-            <div class="mx-auto max-w-2xl text-center">
-                <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">About Me!</h2>
-                <p class="mt-6 text-lg font-medium text-gray-300 sm:text-xl">
-                    Hello! I'm Elavarasan Thandapani, an ambitious undergraduate specializing in cybersecurity at Sathyabama Institute of Science and Technology. My goal is to contribute to a safer digital environment while enhancing my expertise.
-                </p>
-            </div>
-            </div> 
-            
+    <section class="py-12 sm:py-24 flex-grow">
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-indigo-600">About Me</h2>
+            <p class="mt-6 text-lg text-gray-600 text-justify">
+                Hello! I'm Elavarasan Thandapani, an undergraduate cybersecurity enthusiast at Sathyabama Institute of Science and Technology.
+                Passionate about ethical hacking, penetration testing, and threat analysis, I strive to contribute to a safer digital world.
+            </p>
+        </div>
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h2 class="text-4xl font-bold text-indigo-600 pt-10">Team</h2>
+            <p class="mt-6 text-lg text-gray-600 text-justify">
+                Introducing the Digital Mavericks: an eclectic team of six tech-savvy renegades determined to conquer the adrenaline-fueled realm of Capture The Flag (CTF) contests.
+                United by a passion for solving cyber puzzles and a rebellious spirit that shuns convention, this group thrives on fusing technical genius with a playful streak of defiance.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- Skills Section -->
+    <section class="py-6">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-3xl font-bold text-indigo-600 text-center">Skills</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 text-center">
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                    <h4 class="text-lg font-semibold text-indigo-600">Ethical Hacking</h4>
+                    <p class="text-gray-600 mt-2">Proficient in penetration testing and vulnerability assessments.</p>
+                </div>
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                    <h4 class="text-lg font-semibold text-indigo-600">Network Security</h4>
+                    <p class="text-gray-600 mt-2">Experience in securing networks against potential threats.</p>
+                </div>
+                <div class="p-6 bg-gray-200 rounded-lg shadow-lg hover-card">
+                    <h4 class="text-lg font-semibold text-indigo-600">Python for Security</h4>
+                    <p class="text-gray-600 mt-2">Automation of security processes using Python scripting.</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-12 bg-gray-200">
+        <div class="max-w-7xl mx-auto text-center px-4">
+            <h3 class="text-3xl font-bold text-indigo-600">Contact Me</h3>
+            <p class="mt-4 text-gray-600">Feel free to reach out for collaborations or inquiries.</p>
+            <a href="mailto:elavarasanthandapani@gmail.com" class="mt-4 inline-block px-6 py-3 bg-indigo-600 rounded-lg text-white font-bold hover:bg-indigo-800">Email Me</a>
+        </div>
+    </section>
+
 
     <!-- JavaScript -->
     <script>
