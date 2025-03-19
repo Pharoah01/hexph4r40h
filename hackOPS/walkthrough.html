@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="hackOPS CTF Report - Explore our journey of hosting a Capture The Flag event, the challenges, winners, and behind-the-scenes setup.">
+    <title>hackOPS CTF | hexph4r40h</title>
+    <h1 class="sr-only">hexph4r40h</h1>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fira+Code&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero svg {
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 150%;
+            height: auto;
+            z-index: -1;
+            animation: moveBlob 20s ease-in-out infinite alternate;
+            opacity: 0.3;
+        }
+
+        @keyframes moveBlob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate(30px, 20px) scale(1.05);
+            }
+
+            100% {
+                transform: translate(-30px, -20px) scale(1);
+            }
+        }
+
+        section {
+            max-width: 900px;
+        }
+    </style>
+</head>
