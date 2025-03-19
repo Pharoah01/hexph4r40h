@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about social engineering attacks, real-life examples, and how to protect yourself from phishing, pretexting, and spear-phishing scams.">
+    <title>hackOPS CTF</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code:wght@400&display=swap');
+
+        * {
+            -webkit-text-size-adjust: auto;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .blinking {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        [role='dialog'] {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-100 select-none leading-loose">
+
+    <!-- Header -->
+    <header class="bg-black text-green-400 p-4 flex justify-between items-center shadow-md">
+        <h1 class="text-2xl font-bold tracking-wide">hexph4r40h</h1>
+        <nav class="space-x-6 text-sm font-mono">
+            <a href="#" class="hover:text-green-300">Home</a>
+            <a href="#" class="hover:text-green-300">Challenges</a>
+            <a href="#" class="hover:text-green-300">Leaderboard</a>
+            <a href="#" class="hover:text-green-300">About</a>
+        </nav>
+    </header>
+
+    <!-- Body -->
+    <main class="py-12 px-4">
+        <div class="max-w-2xl mx-auto bg-black text-green-400 font-mono p-6 rounded-lg shadow-lg">
+            <p><span class="text-green-500">$</span> ls -la</p>
+            <p>drwxr-xr-x  5 user  staff   160 Mar 19 12:00 .</p>
+            <p>drwx------  7 user  staff   224 Mar 19 12:00 ..</p>
+            <p>-rw-r--r--  1 user  staff   614 Mar 19 12:00 README.md</p>
+            <p>drwxr-xr-x  4 user  staff   128 Mar 19 12:00 challenges</p>
+            <p><span class="text-green-500">$</span> <span class="blinking">_</span></p>
+        </div>
+    </main>
+
+</body>
+
+</html>
