@@ -13,7 +13,7 @@
     </style>
 </head>
 
-<body class="min-h-screen flex flex-col bg-[#f9fafb] text-gray-800 scroll-smooth">
+<body class="min-h-screen flex flex-col bg-[#f9fafb] text-gray-800 scroll-smooth text-justify leading-relaxed">
 
     <!-- Header / Hero -->
     <header class="bg-white py-2 px-8 border-b border-gray-200">
@@ -21,11 +21,11 @@
             <!-- Left Side -->
             <div class="text-center md:text-left space-y-3">
                 <h1 class="text-4xl font-extrabold text-gray-900">hackOPS<span class="text-indigo-500">{}</span></h1>
-                <p class="text-gray-600">BTS: Capture The Flag</p>
+                <p class="text-gray-600">Write-ups | CTF</p>
                 <a href="#" class="inline-block bg-red-500 text-white px-4 py-2 rounded shadow hover:bg-red-600">Read Report 🚩</a>
             </div>
             <!-- Right Side -->
-            <div class="mt-6 md:mt-0 max-w-md md:ml-8 text-gray-600 text-sm md:text-base leading-relaxed text-justify">
+            <div class="mt-6 md:mt-0 max-w-md md:ml-8 text-gray-600 text-sm md:text-base text-justify">
                 <p><sapn class="text-pink-600"><em><strong>hackOPS{CTF}</strong></em></sapn>, Explore detailed writeups and solutions spanning Reverse Engineering, Web Exploitation, Forensics, and Cryptography.</p>
             </div>
         </div>
@@ -77,6 +77,23 @@
                 <p class="text-sm text-gray-500 mb-4">Flag Format: <code class="bg-gray-100 px-1 rounded">hackOPS{}</code></p>
                 <div class="flex flex-col gap-2 mb-4">
                     <a href="http://mirage.infinityfreeapp.com" target="_blank" class="text-sm text-white bg-pink-600 hover:bg-pink-700 py-2 rounded text-center">Access Challenge</a>
+                    <a href="#" target="_blank" class="text-sm text-pink-600 border border-pink-600 py-2 rounded text-center hover:bg-pink-50">Walkthrough</a>
+                </div>
+                <footer class="flex items-center gap-2 mt-2 text-sm text-gray-500">
+                    <img src="/assests/images/jaswanth.png" referrerpolicy="no-referrer" loading="lazy" alt="avatar" class="w-7 h-7 rounded-full">
+                    <span>hexph4r40h • Mar 20, 2025</span>
+                </footer>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="border border-gray-200 round-lg p-6 hover:shadow-lg hover:scale-105 transform transition duration-300 bg-white">
+                <p class="text-sm mb-2 text-pink-500">General • CTF</p>
+                <h2 class="text-2xl font-semibold mb-2">Pole Enc</h2>
+                <p class="mb-3 text-gray-700">"A mysterious encoded document named pole.txt was recovered from a compromised system. Luckily, an internal tool (ende.py) was found along with a note (pw.txt). It seems that this tool might help you unlock the contents of the document. Can you figure out how to reverse the protection and uncover the hidden message?".</p>
+                <p class="mb-3 text-gray-700">💡 Hint: The tool looks like it takes certain flags. Carefully examine how it handles input and arguments.</p>
+                <p class="text-sm text-gray-500 mb-4">Flag Format: <code class="bg-gray-100 px-1 rounded">hackOPS{}</code></p>
+                <div class="flex flex-col gap-2 mb-4">
+                    <a href="#" target="_blank" class="text-sm text-white bg-pink-600 hover:bg-pink-700 py-2 rounded text-center" download>Access Materials</a>
                     <a href="#" target="_blank" class="text-sm text-pink-600 border border-pink-600 py-2 rounded text-center hover:bg-pink-50">Walkthrough</a>
                 </div>
                 <footer class="flex items-center gap-2 mt-2 text-sm text-gray-500">
