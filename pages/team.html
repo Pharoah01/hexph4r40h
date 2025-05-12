@@ -175,18 +175,18 @@
   </div>
 
   <!-- Script for Menu Toggle -->
-  <script>
-    const mobileMenuBtn = document.getElementById('mobile-menu-button');
-    const closeMenuBtn = document.getElementById('close-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
+<script>
+  const mobileMenu = document.getElementById('mobile-menu');
+  const openButton = document.getElementById('mobile-menu-button');
+  const closeButton = document.getElementById('close-menu-button');
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.remove('hidden');
-    });
+  openButton.addEventListener('click', () => {
+    mobileMenu.classList.remove('hidden');
+  });
 
-    closeMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
-    });
-  </script>
+  closeButton.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+  });
+</script>
 </body>
 </html>
