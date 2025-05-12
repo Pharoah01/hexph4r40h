@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Team | Binary Misfits</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&family=Fira+Code:wght@400&display=swap');
+
+    * {
+      -webkit-text-size-adjust: auto;
+    }
+
+    [role='dialog'] {
+      transition: all 0.3s ease-in-out;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      color: #1a202c;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hover-card:hover {
+      transform: scale(1.10);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 0 4px 20px rgba(0, 0, 255, 0.5);
+      background-color: #f3f4f6;
+    }
+  </style>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body class="select-none antialiased">
+
+  <!-- Navigation Bar -->
+  <div class="bg-white sticky top-0 z-50 shadow-sm">
+    <header>
+      <nav class="flex items-center justify-between px-4 py-3 lg:px-6" aria-label="Global">
+        <!-- Logo -->
+        <div class="flex lg:flex-1">
+          <a draggable="false" target="_blank" rel="noopener" href="/" class="-m-1.5 p-1.5">
+            <span class="sr-only">hexph4r40h</span>
+            <p class="text-lg font-bold text-indigo-600 hover:text-indigo-700">hexph4r40h</p>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="flex lg:hidden">
+          <button type="button" id="mobile-menu-button" class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-700">
+            <span class="sr-only">Open main menu</span>
+            <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex lg:gap-x-8">
+          <a href="/index.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">Home</a>
+          <a href="about.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">About</a>
+          <a href="projects.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">Projects</a>
+          <a href="certifications.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">Certifications</a>
+          <a href="blog.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">Blog</a>
+          <a href="team.html" class="text-sm font-semibold text-gray-700 hover:text-indigo-600 hover:scale-105 transition-transform">Team</a>
+        </div>
+
+        <!-- Contact -->
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="mailto:elavarasanthandapani@gmail.com" class="text-sm font-semibold text-indigo-600 hover:text-indigo-800">Contact Me! &rarr;</a>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden fixed inset-0 z-50 lg:hidden">
+        <div class="fixed inset-0 bg-gray-800 bg-opacity-75"></div>
+        <div class="fixed inset-y-0 right-0 w-full max-w-sm bg-white shadow-lg z-50 overflow-y-auto">
+          <div class="flex items-center justify-between px-4 py-3">
+            <p class="text-lg font-bold text-indigo-600">hexph4r40h</p>
+            <button id="close-menu-button" class="-m-2 p-2 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="space-y-4 px-4 py-3">
+            <a href="/index.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">Home</a>
+            <a href="about.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">About</a>
+            <a href="projects.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">Projects</a>
+            <a href="certifications.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">Certifications</a>
+            <a href="blog.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">Blog</a>
+            <a href="team.html" class="block text-sm font-semibold text-gray-700 hover:text-indigo-600">Team</a>
+          </div>
+          <div class="flex justify-center mt-10 pb-6">
+            <a href="/" class="text-white font-bold text-lg rounded-lg bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 px-6 py-2 shadow-lg hover:scale-105 transition-transform">hexph4r40h</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!-- End Navigation -->
+
+  <!-- Team Section -->
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold text-center mb-6">Meet the Team</h1>
+    <p class="text-center text-gray-600 mb-8">We are a group of passionate individuals dedicated to making a difference in the world of technology.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Team Member Card -->
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Goushal" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Goushal</h2>
+        <p class="text-gray-600">JellyBean</p>
+        <p class="text-gray-500 mt-2">JellyBean, who is interested in Web-Exploitation and Digital Foensics.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/goushal-k-590941279/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/goushalk" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Harish" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Harish</h2>
+        <p class="text-gray-600">h4r15h</p>
+        <p class="text-gray-500 mt-2">h4r15h, a passionate CTF🚩player. Networking, Hardware Management, Hardware Configuration, Python, Bash Scripting.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/harish-k-p-12847b291/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/harish-pushan" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Aswath A V" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Aswath A V</h2>
+        <p class="text-gray-600">ashh</p>
+        <p class="text-gray-500 mt-2">ashh, a passionate CTF🚩player. Interested in Cryptography, Digital-Forensics.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/a-v-aswath/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/Ashwath-001" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Lakshitha" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Lakshitha S</h2>
+        <p class="text-gray-600">L4k1</p>
+        <p class="text-gray-500 mt-2">L4k1, a passionate CTF🚩player. Interested in Forensics, Cryptography.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/lakshitha-s-59979b338/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/Lakshitha-01" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Arjun Balasubramanian" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Arjun Balasubramanian</h2>
+        <p class="text-gray-600">bluekyyy</p>
+        <p class="text-gray-500 mt-2">bluekyyy, a passionate CTF🚩player. Interested in Web-Exploitation, Forensics, Stegnography.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/arjun-balasubramanian/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/bluekyyyy" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+      <div class="hover-card bg-white rounded-lg shadow-lg p-6 text-center">
+        <img src="#" alt="Nithila RajeshKumar" class="rounded-full w-32 h-32 mx-auto mb-4" />
+        <h2 class="text-xl font-semibold">Nithila RajeshKumar</h2>
+        <p class="text-gray-600">Luna</p>
+        <p class="text-gray-500 mt-2">Luna, a passionate CTF🚩player. Interested in Stegnography, Web-Exploitation, Cryptography.</p>
+        <div class="flex justify-center mt-4 space-x-4">
+          <a href="https://www.linkedin.com/in/nithila-rajeshkumar/" class="text-indigo-600 hover:text-indigo-800">LinkedIn</a>
+          <a href="https://github.com/Nithila0411" class="text-indigo-600 hover:text-indigo-800">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script for Menu Toggle -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-button');
+    const closeMenuBtn = document.getElementById('close-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
