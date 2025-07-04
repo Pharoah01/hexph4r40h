@@ -127,53 +127,27 @@
 <!------------------------------------Java Script------------------------------>
           <script>
             document.addEventListener("DOMContentLoaded", function () {
-                const menuButton = document.querySelector(".lg\\:hidden button");
-                const mobileMenu = document.querySelector("[role='dialog']");
-                
-                menuButton.addEventListener("click", () => {
-                    const isMenuOpen = mobileMenu.classList.contains("hidden");
-                    if (isMenuOpen) {
-                        mobileMenu.classList.remove("hidden");
-                    } else {
-                        mobileMenu.classList.add("hidden");
-                    }
-                });
-        
-                const closeButton = mobileMenu.querySelector("button");
-                closeButton.addEventListener("click", () => {
-                    mobileMenu.classList.add("hidden");
-                });
+            const menuButton = document.getElementById("mobile-menu-button");
+            const mobileMenu = document.getElementById("mobile-menu");
+            const closeButton = document.getElementById("close-menu-button");
+            const overlay = mobileMenu.querySelector(".bg-gray-800");
+
+            menuButton.addEventListener("click", () => {
+                mobileMenu.classList.remove("hidden");
+                menuButton.setAttribute("aria-expanded", "true");
             });
 
-            const cvLink = document.querySelector('a[href="Elavarasan Jaswanth.pdf"]');
-            cvLink.addEventListener("click", (event) => {
-                fetch("Elavarasan Jaswanth.pdf")
-                    .then((response) => {
-                        if (!response.ok) {
-                            alert("CV is currently unavailable. Please try again later.");
-                            event.preventDefault();
-                        }
-                    })
-                    .catch(() => {
-                        alert("Error loading CV.");
-                        event.preventDefault();
-                    });
+            closeButton.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
+
+            overlay.addEventListener("click", () => {
+                mobileMenu.classList.add("hidden");
+                menuButton.setAttribute("aria-expanded", "false");
+            });
             });
         </script>
 
-        <!--Start of Tawk.to Script
-        <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/67db0ae6d3bed8190a7ea85c/1imnq560k';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-        </script>
-        <End of Tawk.to Script-->
-        
     </body>
 </html>

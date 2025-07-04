@@ -10,24 +10,127 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
     body { font-family: 'Poppins', sans-serif; }
-    /* Simple fade-in */
-    .fade-in {
-      animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+
+    /* Bouncy fade-in entrance */
+    .bouncy-in {
+      animation: bounceIn 1s cubic-bezier(.33,1.22,.53,1.14) 0.1s both;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px);}
-      to   { opacity: 1; transform: none;}
+    @keyframes bounceIn {
+      0% { opacity: 0; transform: scale(.7) translateY(60px);}
+      60% { opacity: 1; transform: scale(1.07) translateY(-16px);}
+      80% { transform: scale(.96) translateY(7px);}
+      100% { opacity: 1; transform: scale(1) translateY(0);}
+    }
+
+    /* Animated border pulse */
+    .card-glow {
+      position: relative;
+      z-index: 1;
+    }
+    .card-glow::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 1.1rem;
+      background: linear-gradient(120deg, #818cf8, #e879f9 40%, #fbbf24 100%);
+      filter: blur(5px) brightness(1.1);
+      opacity: 0.25;
+      z-index: -1;
+      animation: pulseGlow 1.9s ease-in-out infinite alternate;
+    }
+    @keyframes pulseGlow {
+      0% { opacity: 0.15; filter: blur(3px) brightness(1.0);}
+      100% { opacity: 0.32; filter: blur(7px) brightness(1.12);}
+    }
+
+    /* Sparkle emoji wiggle */
+    .sparkle {
+      animation: sparkleWiggle 1.7s infinite;
+      display: inline-block;
+      font-size: 2rem;
+      filter: drop-shadow(0 0 6px #fbbf24);
+    }
+    @keyframes sparkleWiggle {
+      0%,100% { transform: rotate(-8deg) scale(1.13);}
+      50% { transform: rotate(14deg) scale(1.28);}
+    }
+
+    /* Button shimmer */
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -75%;
+      height: 100%;
+      width: 75%;
+      background: linear-gradient(110deg, transparent, rgba(255,255,255,0.6) 50%, transparent 100%);
+      transform: skewX(-22deg);
+      animation: shimmer 2.1s infinite;
+      pointer-events: none;
+      z-index: 2;
+    }
+    @keyframes shimmer {
+      0% { left: -75%;}
+      60% { left: 110%;}
+      100% { left: 110%;}
+    }
+
+    /* Headline shine */
+    .shine {
+      background: linear-gradient(92deg,#fff,#bda3ff 50%,#ffdbbb 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textShine 2.5s ease-in-out infinite alternate;
+    }
+    @keyframes textShine {
+      0% { filter: brightness(1);}
+      100% { filter: brightness(1.22);}
+    }
+
+    /* Floating confetti dots */
+    .confetti-dot {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.5;
+      pointer-events: none;
+      animation: floatDots 5s linear infinite;
+      z-index: 0;
+    }
+    @keyframes floatDots {
+      0% { transform: translateY(50px) scale(.9);}
+      40% { opacity: .7;}
+      100% { transform: translateY(-150px) scale(1.12);}
+    }
+    /* Custom slow spin */
+    .animate-spin-slow {
+      animation: spin 2.8s linear infinite;
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 min-h-screen flex items-center justify-center antialiased select-none">
+<body class="bg-gradient-to-br from-gray-900 via-indigo-950 to-gray-800 min-h-screen flex items-center justify-center antialiased select-none overflow-hidden">
 
-  <main class="fade-in flex flex-col items-center justify-center w-full px-4">
-    <div class="backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-xl p-8 sm:p-10 max-w-sm w-full flex flex-col items-center space-y-6">
-      <!-- Animated Gradient Spinner -->
-      <div class="relative w-24 h-24 flex items-center justify-center">
+  <!-- Confetti Dots -->
+  <div>
+    <div class="confetti-dot" style="width:14px;height:14px;left:8%;top:74%;background:linear-gradient(45deg,#fbbf24,#a5b4fc);"  ></div>
+    <div class="confetti-dot" style="width:12px;height:12px;left:77%;top:67%;background:linear-gradient(120deg,#818cf8,#f472b6);animation-delay:.7s"></div>
+    <div class="confetti-dot" style="width:9px;height:9px;left:33%;top:89%;background:linear-gradient(60deg,#e879f9,#fbbf24);animation-delay:1.3s"></div>
+    <div class="confetti-dot" style="width:13px;height:13px;left:64%;top:82%;background:linear-gradient(100deg,#818cf8,#fbbf24);animation-delay:.2s"></div>
+    <div class="confetti-dot" style="width:8px;height:8px;left:45%;top:93%;background:linear-gradient(60deg,#a5b4fc,#f472b6);animation-delay:2.3s"></div>
+    <div class="confetti-dot" style="width:10px;height:10px;left:21%;top:81%;background:linear-gradient(70deg,#fbbf24,#f472b6);animation-delay:1.7s"></div>
+    <div class="confetti-dot" style="width:12px;height:12px;left:82%;top:92%;background:linear-gradient(130deg,#f472b6,#818cf8);animation-delay:.5s"></div>
+    <div class="confetti-dot" style="width:10px;height:10px;left:54%;top:88%;background:linear-gradient(140deg,#fbbf24,#818cf8);animation-delay:2.1s"></div>
+  </div>
+
+  <main class="bouncy-in flex flex-col items-center justify-center w-full px-4 z-10">
+    <div class="card-glow backdrop-blur-md bg-white/10 border border-white/10 rounded-2xl shadow-2xl p-8 sm:p-10 max-w-sm w-full flex flex-col items-center space-y-6 relative">
+      <!-- Animated Spinner & Sparkle -->
+      <div class="relative w-24 h-24 flex items-center justify-center mb-1">
         <span class="absolute inset-0 rounded-full bg-gradient-to-tr from-indigo-400 via-fuchsia-500 to-amber-400 blur-sm opacity-70 animate-spin-slow"></span>
-        <svg class="relative z-10 w-20 h-20 text-indigo-200" viewBox="0 0 50 50" fill="none">
+        <svg class="relative z-10 w-20 h-20 text-indigo-200 animate-spin-slow" viewBox="0 0 50 50" fill="none">
           <circle class="opacity-30" cx="25" cy="25" r="20" stroke="currentColor" stroke-width="6" fill="none"></circle>
           <path class="opacity-90" stroke="url(#grad)" stroke-width="6" stroke-linecap="round" fill="none" d="M25 5a20 20 0 0 1 0 40"/>
           <defs>
@@ -38,24 +141,28 @@
             </linearGradient>
           </defs>
         </svg>
+        <span class="sparkle absolute -right-6 bottom-0 pointer-events-none select-none" aria-hidden="true">✨</span>
       </div>
-      <!-- Headline -->
-      <h1 class="text-2xl sm:text-3xl font-bold text-white tracking-tight drop-shadow-md">Under Maintenance</h1>
+      <!-- Headline with Shine -->
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight drop-shadow-lg shine text-center">
+        Under Maintenance
+      </h1>
       <p class="text-base sm:text-lg text-indigo-100 text-center leading-relaxed">
-        Our project section is getting a fresh upgrade.<br>
+        HexPharoah's Project section is getting a fresh upgrade.<br>
+        Enjoy the glow and confetti for now!<br>
         Please check back soon!
       </p>
-      <a href="/index.html" class="mt-2 inline-block rounded-lg bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-amber-400 text-white font-semibold px-6 py-2 shadow-md transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <a href="/index.html" class="mt-2 shimmer-btn inline-block rounded-lg bg-gradient-to-r from-indigo-500 via-fuchsia-500 to-amber-400 text-white font-semibold px-6 py-2 shadow-md transition-transform duration-150 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400">
         &larr; Back To Home
       </a>
     </div>
-    <footer class="mt-10 text-xs text-gray-400 text-center opacity-80">
+    <footer class="mt-10 text-xs text-gray-400 text-center opacity-80 drop-shadow-lg z-10">
       &copy; 2025 hexph4r40h <span class="text-pink-400"></span>.
     </footer>
   </main>
 
-  <!-- Custom Tailwind animation utility for slow spin -->
   <script>
+    // Tailwind custom config
     tailwind.config = {
       theme: {
         extend: {
