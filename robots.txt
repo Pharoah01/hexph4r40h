@@ -2,3 +2,7 @@ User-agent: *
 Disallow: /
 Disallow: /README.md
 Disallow: /.hintrc
+Disallow: /.vscode
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /pages/Upcoming_Contents.md
